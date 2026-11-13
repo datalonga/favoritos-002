@@ -16,10 +16,10 @@
 
 /* ============================== 1. CONFIG ============================== */
 const CONFIG = {
-  // Podem ser preenchidos aqui para deploy; se vazios, o app pede na tela de
-  // configurações e guarda em localStorage.
-  SUPABASE_URL: '',
-  SUPABASE_ANON_KEY: '',
+  // Configuração pública padrão para o site estático. Não coloque chaves secretas aqui.
+  // Uma configuração salva pelo usuário neste navegador tem prioridade.
+  SUPABASE_URL: 'https://vkjbospwanwyizhnktyy.supabase.co',
+  SUPABASE_ANON_KEY: 'sb_publishable_Ubt6st1DTVCpM5vGzF02mw_5EnUk81o',
   SUPABASE_CDN: 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm',
 
   MAX_FILE_MB: 5,

@@ -4,10 +4,10 @@ Organizador pessoal de favoritos em HTML, CSS e JavaScript nativos, com Supabase
 
 ## Instalação
 
-1. Crie um projeto Supabase e abra **SQL Editor → New query**. Execute todo o arquivo [`supabase/schema.sql`](supabase/schema.sql).
-2. Em **Project Settings → API** (ou Connect/API Keys, conforme a versão do painel), copie a URL do projeto e a chave pública **anon** ou chave publicável compatível. Nunca use a chave `service_role`.
-3. Sirva o diretório por HTTP. Por exemplo, execute `python3 -m http.server 8000` na pasta do projeto e acesse `http://localhost:8000`. Também é possível publicar os arquivos em qualquer hospedagem estática, como GitHub Pages. A primeira conexão requer acesso à internet para carregar o cliente Supabase via CDN.
-4. No modal de configuração, informe a URL e a chave, teste e salve. O navegador guarda ambas em localStorage. Escolha Importar na barra lateral e selecione o JSON de favoritos.
+1. No projeto Supabase configurado, abra **SQL Editor → New query** e execute todo o arquivo [`supabase/schema.sql`](supabase/schema.sql), caso ainda não tenha sido executado.
+2. Sirva o diretório por HTTP. Por exemplo, execute `python3 -m http.server 8000` na pasta do projeto e acesse `http://localhost:8000`. Também é possível publicar os arquivos em qualquer hospedagem estática, como GitHub Pages. A conexão requer acesso à internet para carregar o cliente Supabase via CDN.
+3. A URL e a chave **publicável** do projeto já estão definidas em `CONFIG` no `app.js`. Assim, novos navegadores e dispositivos usam esse projeto automaticamente, sem configuração manual. Escolha Importar na barra lateral e selecione o JSON de favoritos.
+4. O modal Configurações ainda permite trocar o projeto para um navegador específico: valores salvos no localStorage têm prioridade sobre os padrões do arquivo. Para voltar aos padrões, remova as chaves `ls.supabase.url` e `ls.supabase.key` do armazenamento local do site. Para mudar o padrão de todos os novos acessos, edite `CONFIG` e publique novamente. Nunca use a chave `service_role`.
 
 O modo de demonstração usa apenas a memória da aba, com dados de exemplo: alterações desaparecem ao recarregar e não são gravadas no Supabase. Desative-o nas configurações para conectar ao banco.
 
